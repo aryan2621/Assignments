@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/signup.css">
+
+<nav class="mb-4 navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">AMAZON</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul>
+
+  </ul>
+</nav>
+<div class="register mb-2">
+  <img class="register__logo"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" alt="" />
+  <% include ./partials/messages %>
+  <div class="register__container">
+    <h1>Create account</h1>
+    <form action="/users/register" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="name" id="name" name="name" class="form-control" placeholder="Enter Name"
+          value="<%= typeof name != 'undefined' ? name : '' %>" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"
+          value="<%= typeof email != 'undefined' ? email : '' %>" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Create Password"
+          value="<%= typeof password != 'undefined' ? password : '' %>" />
+      </div>
+      <div class="form-group">
+        <label for="password2">Confirm Password</label>
+        <input type="password" id="password2" name="password2" class="form-control" placeholder="Confirm Password"
+          value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+      </div>
+      <button type="submit" class="btn btn-success btn-block">
+        Register
+      </button>
+    </form>
+    <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+  </div>
+</div>
+
+
+<footer class="page-footer font-small bg-dark mb-0">
+  <div style="font-size: large;" class="footer-copyright text-light text-center py-3">© 2021 Copyright
+  </div>
+</footer>

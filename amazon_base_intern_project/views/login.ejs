@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/login.css">
+
+
+<nav class="mb-4 navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">AMAZON</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul>
+
+  </ul>
+</nav>
+<div class="login">
+  <img class="login__logo"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" alt="" />
+  <% include ./partials/messages %>
+  <div class="login__container">
+    <h1>Sign-in</h1>
+    <form action="/users/login" method="POST">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" />
+      </div>
+      <button type="submit" class="btn btn-info btn-block">Login</button>
+    </form>
+    <p class="lead mt-4">
+      No Account? <a href="/users/register">Register</a>
+    </p>
+  </div>
+</div>
+<footer class="page-footer font-small bg-dark mb-0" style="margin-top: 27px;">
+  <div style="font-size: large;" class="footer-copyright text-light text-center py-3">© 2021 Copyright
+  </div>
+</footer>

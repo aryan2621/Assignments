@@ -1,0 +1,1 @@
+# amazon_base_intern_project

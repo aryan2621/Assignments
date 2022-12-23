@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  font-family: cursive;
+  font-size: medium;
+}
+.title_section {
+  width: 100%;
+  background: #89cff0;
+  height: 48vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(240, 255, 255);
+}
+
+.title_section input {
+  width: 400px;
+  height: 40px;
+}
+
+.title_section button:hover {
+  background: #3437e2;
+  cursor:pointer;
+}
